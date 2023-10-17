@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad Número 3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ========== Start Búsqueda Datos ========== -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <form class="row g-3">
+        <div class="col-md-3">
+          <label for="busquedaIdentificacion" class="form-label">Búsqueda</label>
+          <input type="text" class="form-control" id="busquedaIdentificacion">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success" type="submit" onclick="buscarDato()">Buscar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ========== End Búsqueda Datos ========== -->
+
+  <!-- ========== Start Formulario Datos ========== -->
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <h2 class="mt-5 titulo">Registro de Datos</h2>
+          <form class="row g-3 formularioDatos">
+            <div class="col-md-6">
+              <label for="formIdentificacion" class="form-label">Identificación</label>
+              <input type="text" class="form-control" id="formIdentificacion" required>
+            </div>
+            <div class="col-md-6">
+              <label for="formNombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="formNombre" required>
+            </div>
+            <div class="col-md-6">
+              <label for="formApellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="formApellidos" required>
+            </div>
+            <div class="col-md-6">
+              <label for="formDireccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="formDireccion" required>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-warning" type="submit" onclick="guardarDatos()">Guardar</button>
+            </div>
+          </form>
+      </div>
+  </div>
+  <!-- ========== End Formulario Datos ========== -->
+
+  <!-- ========== Start Mostrar Datos ========== -->
+  <div class="container mt-5">
+    <h2 class="titulo mb-4">Vista de Registros</h2>      
+    <div class="table-responsive">
+      <table class="table" id="tablaDatos">
+        <thead>
+          <tr>
+            <th>Identificación</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+          <!-- Espacio mostrar datos -->
+        </tbody>
+      </table>
+    </div>      
+  </div>
+  <!-- ========== End Mostrar Datos ========== -->
+</body>
+</html>
